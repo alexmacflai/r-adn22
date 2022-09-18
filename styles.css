@@ -6,7 +6,7 @@
 }
 
 :root {
-    font-size: clamp(1.6vw, 1.6vw, 16px);
+    font-size: clamp(1.6vw, 1.6vw, 18px);
         
     --spacing-fixed-tiny: 8px;
     --spacing-fixed-small: 16px;
@@ -36,20 +36,20 @@ h2 {
 }
 
 h3 {
-    font-size: clamp(1.1rem, 16px, 16px);
+    font-size: clamp(1.1rem, 18px, 18px);
 }
 
 button {
-    font-size: clamp(1rem, 14px, 14px);
+    font-size: clamp(1rem, 16px, 16px);
 }
 
 button.small {
-    font-size: clamp(0.8rem, 14px, 14px);
+    font-size: clamp(0.8rem, 16px, 16px);
 }
 
 h1, h2, h3, button {
     color: white;
-    font-family: 'Scto Grotesk A';
+    font-family: 'Scto Grotesk A', sans-serif;
     font-weight: 300;
 }
 
