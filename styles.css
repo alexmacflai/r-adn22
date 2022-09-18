@@ -389,6 +389,24 @@ flex-grow: 1;
 
 
 
+.tile {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    -webkit-transition-delay: .3s;
+    -o-transition-delay: .3s;
+    transition-delay: .3s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    transition-timing-function: ease-out;
+    opacity: 0;
+}
+
+.inView {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+}
 
 
 /* RESPONSIVENESS */
