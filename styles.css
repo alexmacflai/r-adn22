@@ -1,3 +1,5 @@
+/* RESET */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +8,8 @@
     text-decoration: none;
 }
 
+/* VARIABLES */
+
 :root {   
     --spacing-tiny: 16px;     
     --spacing-small: 24px;
@@ -13,9 +17,10 @@
     --spacing-big: 64px;
     --spacing-bigger: 6vw;
     --spacing-huge: 14vw;
-    
     background-color: black
 }
+
+/* TYPOGRAPHY */
 
 a {
     color:white
@@ -41,7 +46,6 @@ a:active {
   color: white;
 } 
 
-/*  */
 
 h1, h2, h3, .button, p {
     color: white;
@@ -100,14 +104,8 @@ header {
 
     background: #000000;
 
-
-    flex: none;
-    order: 8;
-    flex-grow: 0;
     z-index: 8;
 }
-
-
 
 header img {
     width: clamp(var(--spacing-medium), 4vw, var(--spacing-big));
@@ -118,7 +116,6 @@ header img {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-/*     padding: 1.8vw 2.5vw; */
     padding: clamp(var(--spacing-small), 1vw, var(--spacing-medium)) clamp(32px, 1vw, var(--spacing-medium));
 
     background: #FFFFFF;
@@ -133,8 +130,8 @@ header img {
     padding: clamp(var(--spacing-tiny), 1vw, var(--spacing-tiny)) clamp(var(--spacing-small), 1.5vw, var(--spacing-big));
 }
 
-/* LAYOUTS */
 
+/* LAYOUTS */
 
 main {
     display: flex;
@@ -148,6 +145,7 @@ main {
 section {
     min-height: 100vh;
 }
+
 
 .fourSeasons {
     display: flex;
@@ -203,43 +201,36 @@ section {
     height:auto
 }
 
-
 .fourSeasons .footer {
     display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-padding: 0px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
 
     width: 100%;
-/*     height: 24px;
- */
-
-    /* Inside auto layout */
 
     flex: none;
     order: 2;
     align-self: stretch;
     flex-grow: 0;
-    
 }
 
 .fourSeasons .footer h3 {
     display: flex;
     align-items: center;
-    /* Inside auto layout */
-
+    
     flex: none;
     order: 0;
     flex-grow: 0;
 }
+
 
 .eventDescription {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-/*     padding: 80px 200px; */
     padding: var(--spacing-bigger) var(--spacing-huge);
 
     flex: none;
@@ -261,12 +252,12 @@ padding: 0px;
     flex-grow: 0;
 }
 
+
 .eventExtra {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-/*     padding: 80px 200px; */
     padding: var(--spacing-bigger) var(--spacing-huge);
 
     text-align:center;
@@ -283,38 +274,20 @@ padding: 0px;
 }
 
 
-/* .button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 1.8vw 2.5vw;
-    margin-top: 4vw;
-
-    background: #FFFFFF;
-    border-radius: 1000px;
-
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-} */
-
 .reaktor {
     display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-padding: 120px 0px;
-gap: 4vw;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 0px;
+    gap: 4vw;
 
-width: 100%;
+    width: 100%;
 
-/* Inside auto layout */
-
-flex: none;
-align-self: stretch;
-flex-grow: 0;
-z-index: 6;
+    flex: none;
+    align-self: stretch;
+    flex-grow: 0;
+    z-index: 6;
     
     overflow: clip;
 }
@@ -323,11 +296,10 @@ z-index: 6;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-/*     padding: 0px 0px 0px var(--margin-big); */
     padding: 0px var(--spacing-bigger);
     gap: 0;
 
-width:50%;
+    width:50%;
     flex: none;
     order: 0;
     flex-grow: 1;
@@ -353,16 +325,13 @@ width:50%;
     width:50%;
     aspect-ratio: 1/1;
 
-
-/* Inside auto layout */
-
-flex: none;
-order: 1;
-flex-grow: 1;
+    flex: none;
+    order: 1;
+    flex-grow: 1;
 }
 
 
-
+/*  KALEIDOSCOPES */
 
 .kaleidoscope {
     width: 100%;
@@ -388,6 +357,7 @@ flex-grow: 1;
 }
 
 
+/* FADE IN */
 
 .tile {
     -webkit-transform: translateY(50px);
