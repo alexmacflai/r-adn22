@@ -76,7 +76,7 @@ p {
 }
 
 .button {
-    font-size: clamp(1rem, 1vw, 2rem);
+    font-size: clamp(1rem, 1.3vw, 2rem);
     font-weight: 400;
     color: black
 }
@@ -116,7 +116,7 @@ header img {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: clamp(var(--spacing-small), 1vw, var(--spacing-medium)) clamp(32px, 1vw, var(--spacing-medium));
+    padding: clamp(var(--spacing-small), 1vw, var(--spacing-medium)) clamp(var(--spacing-medium), 1vw, var(--spacing-big));
 
     background: #FFFFFF;
     border-radius: 1000px;
@@ -384,7 +384,11 @@ section {
 
 @media (max-width: 1024px) {
     header {
-        padding: var(--spacing-tiny) var(--spacing-big);
+        padding: var(--spacing-tiny) var(--spacing-medium);
+    }
+    
+    .fourSeasons{
+        padding: var(--spacing-medium);
     }
     
     .fourSeasons .name {
@@ -393,8 +397,8 @@ section {
     
     .reaktor {
         flex-direction: column;
-        padding: var(--spacing-big) var(--spacing-big);
-        gap: var(--spacing-medium);
+        padding: var(--spacing-big) var(--spacing-medium);
+        gap: var(--spacing-small);
     }
     
     .reaktor .image {
@@ -421,7 +425,7 @@ section {
 
 @media (max-width: 700px) {
     header {
-        padding: var(--spacing-tiny) var(--spacing-medium);
+        padding: var(--spacing-tiny) var(--spacing-small);
     }
     
     section .button {
@@ -433,7 +437,7 @@ section {
     } 
     
     .eventDescription, .eventExtra, .reaktor{
-        padding: var(--spacing-big) var(--spacing-medium);
+        padding: var(--spacing-big) var(--spacing-small);
     }
     
     .fourSeasons .name {
@@ -442,6 +446,14 @@ section {
     
     .fourSeasons .footer {
         flex-direction: column;
+        gap: 12px
+    }
+    
+    .reaktor {
+        gap: var(--spacing-medium)
+    }
+    
+    .reaktor .content {
         gap: 12px
     }
 
