@@ -408,6 +408,14 @@ section {
         padding:0;
         width:100%
     }
+    
+    h1 {
+        font-size: clamp(1.75rem, 3.5vw + 0.1rem, 4rem);
+    }
+
+    h2 {
+        font-size: clamp(1.3rem, 3vw + 0.1rem, 4rem);
+    }
 }
 
 
