@@ -6,16 +6,8 @@
     text-decoration: none;
 }
 
-:root {
-    font-size: clamp(1.6vw, 1.6vw, 18px);
-        
-    --spacing-fixed-tiny: 8px;
-    --spacing-fixed-small: 16px;
-    --spacing-fixed-medium: 24px;
-    --spacing-fixed-big: 32px;
-    --spacing-fixed-bigger: 40px;
-    --spacing-fixed-huge: 64px;
-    
+:root {        
+
     --margin-medium: 3vw;
     --margin-big: 6vw;
     --margin-biggest: 14vw;
@@ -24,68 +16,75 @@
     background-color: black
 }
 
- /* unvisited link */
-a:link {
-  color: white;
+a {
+    color:white
 }
 
-/* visited link */
+a.button {
+    color:black
+}
+
 a:visited {
-  color: inherit;
-}
-
-/* mouse over link */
-
-/* selected link */
-a:active {
   color: white;
-} 
-
-body {
-    
 }
 
-h1 {
-    font-size: clamp(2rem, 26px, 26px);
-}
-
-h2 {
-    font-size: clamp(1.6rem, 22px, 22px);
-}
-
-h3 {
-    font-size: clamp(1.1rem, 18px, 18px);
-}
-
-.button {
-    font-size: clamp(1rem, 16px, 16px);
-}
-
-.button.small {
-    font-size: clamp(0.8rem, 16px, 16px);
-}
-
-h1, h2, h3, .button {
-    color: white;
-    font-family: 'Scto Grotesk A', sans-serif;
-    font-weight: 300;
-}
-
-.button {
-    font-weight: 400;
-    color: black
+.button:visited {
+    color:black
 }
 
 a:hover {
     opacity:60%
 }
 
+a:active {
+  color: white;
+} 
+
+/*  */
+
+h1, h2, h3, .button, p {
+    color: white;
+    font-family: 'Scto Grotesk A', sans-serif;
+    font-weight: 300;
+    line-height: 120%;
+}
+
+h1 {
+    font-size: clamp(1.75rem, 2.75vw + 0.1rem, 4rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 2.5vw + 0.1rem, 4rem);
+}
+
+h3 {
+    font-size: clamp(1.25rem, 1.75vw + 0.1rem, 1.5rem);
+}
+
+p {
+    font-size: clamp(1.25rem, 1.5vw + 0.1rem, 4rem);
+    line-height: 140%
+}
+
+.button {
+    font-size: clamp(1rem, 1vw, 2rem);
+    font-weight: 400;
+    color: black
+}
+
+.button.small {
+    font-size: clamp(0.75rem, 1vw, 1rem);
+}
+
+
+/* COMPONENTS */
+
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 2vw var(--margin-big);
+    padding: 16px var(--margin-big);
     gap: auto;
 
     position: fixed;
@@ -94,11 +93,8 @@ header {
     left: 0px;
     top: 0px;
 
-    /* Reaktor/Black */
-
     background: #000000;
 
-    /* Inside auto layout */
 
     flex: none;
     order: 8;
@@ -106,47 +102,40 @@ header {
     z-index: 8;
 }
 
+
+
 header img {
-    width: 4vw;
-    min-width: 40px;
-    height: auto;
-
-
-/* Inside auto layout */
-
-flex: none;
-order: 0;
-flex-grow: 0;
+    width: clamp(40px, 4vw, 64px);
 }
 
-.button.small {
+.button {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 16px 24px;
-    padding: 1vw 2vw;
-    margin:0;
-
-    /* Reaktor/White */
+/*     padding: 1.8vw 2.5vw; */
+    padding: clamp(24px, 1vw, 40px) clamp(40px, 1vw, 40px);
 
     background: #FFFFFF;
-    border-radius: 253.333px;
-
-    /* Inside auto layout */
+    border-radius: 1000px;
 
     flex: none;
     order: 1;
     flex-grow: 0;
-    }
+}
+
+.button.small {
+    padding: clamp(16px, 1vw, 16px) clamp(24px, 1.5vw, 64px);
+}
+
+/* LAYOUTS */
+
 
 main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0px;
     isolation: isolate;
-
     position: relative;
     width: 100%;
 }
@@ -155,20 +144,15 @@ section {
     min-height: 100vh;
 }
 
-
-
-
-
 .fourSeasons {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 40px var(--margin-big);
-    gap: var(--margin-biggest);
+    gap: var(--margin-big);
 
     width: 100%;
-    /* Inside auto layout */
 
     flex: none;
     order: 0;
@@ -178,6 +162,7 @@ section {
 }
 
 .fourSeasons .hack {
+    /*  This helps keeping the logo centered */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -185,11 +170,8 @@ section {
     
     width: 100%;
     height: 1px;
-    
     opacity: 0;
-    
-    /* Inside auto layout */
-    
+        
     flex: none;
     order: 0;
     align-self: stretch;
@@ -201,8 +183,7 @@ section {
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    gap: 2vw;
-    
+    gap: clamp(16px, 2vw + 0.1rem, 3vw);
     width:47vw;
 }
 
@@ -290,8 +271,12 @@ padding: 0px;
     z-index: 2;
 }
 
+.eventExtra .button {
+    margin-top: clamp(32px, 3vw + 0.1rem, 4vw);
+}
 
-.button {
+
+/* .button {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -305,12 +290,12 @@ padding: 0px;
     flex: none;
     order: 1;
     flex-grow: 0;
-}
+} */
 
 .reaktor {
     display: flex;
 flex-direction: row;
-justify-content: center;
+justify-content: space-between;
 align-items: center;
 padding: 120px 0px;
 gap: 4vw;
@@ -323,31 +308,37 @@ flex: none;
 align-self: stretch;
 flex-grow: 0;
 z-index: 6;
+    
+    overflow: clip;
 }
 
 .reaktor .content{
     display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px 0px 0px var(--margin-big);
-gap: 2vw;
+    flex-direction: column;
+    align-items: flex-start;
+/*     padding: 0px 0px 0px var(--margin-big); */
+    padding: 0px var(--margin-big);
+    gap: 0;
 
-width: 50%;
-height: 400px;
+width:50%;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
 
+.reaktor .content p {
+    margin-top: clamp(0px ,2vw + 0.1rem, 2vw)
+}
 
-/* Inside auto layout */
-
-flex: none;
-order: 0;
-flex-grow: 1;
+.reaktor .button {
+    margin-top: clamp(24px, 3vw + 0.1rem, 4vw);
 }
 
 .reaktor .image{
     display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
     
     background-image: url("img/reaktorOffice.png");
     background-size: cover;
@@ -362,6 +353,8 @@ flex: none;
 order: 1;
 flex-grow: 1;
 }
+
+
 
 
 .kaleidoscope {
@@ -396,15 +389,14 @@ flex-grow: 1;
 
 @media (max-width: 1024px) {
     header {
-        padding: 24px 40px;
+        padding: 16px 40px;
     }
     
     .button, .button.small {
-        padding: 16px 24px
+/*         padding: 16px 24px */
     }
     
     .fourSeasons .name {
-        gap: 24px;
         width:64vw;
     }
     
@@ -453,20 +445,8 @@ flex-grow: 1;
         gap: 8px
     }
     
-    .button, .button.small {
-        padding: 16px 24px
-    }
-    
-    .eventExtra .button, .reaktor .button {
-        margin-top:24px
-    }
-    
     .reaktor{
-        gap: 24px;
-    }
-
-     .reaktor .content{
-        gap: 8px;
+        gap: 32px;
     }
     
 }
