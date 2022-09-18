@@ -82,7 +82,7 @@ p {
 }
 
 .button.small {
-    font-size: clamp(0.75rem, 1vw, 1rem);
+    font-size: clamp(0.9rem, 1vw, 1rem);
 }
 
 
@@ -306,7 +306,7 @@ section {
 }
 
 .reaktor .content p {
-    margin-top: clamp(0px ,2vw + 0.1rem, 2vw)
+    margin-top: clamp(0px ,1vw + 0.1rem, 2vw);
 }
 
 .reaktor .button {
