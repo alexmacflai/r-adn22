@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     border: none;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
 :root {
@@ -23,6 +24,23 @@
     background-color: black
 }
 
+ /* unvisited link */
+a:link {
+  color: white;
+}
+
+/* visited link */
+a:visited {
+  color: inherit;
+}
+
+/* mouse over link */
+
+/* selected link */
+a:active {
+  color: white;
+} 
+
 body {
     
 }
@@ -39,23 +57,27 @@ h3 {
     font-size: clamp(1.1rem, 18px, 18px);
 }
 
-button {
+.button {
     font-size: clamp(1rem, 16px, 16px);
 }
 
-button.small {
+.button.small {
     font-size: clamp(0.8rem, 16px, 16px);
 }
 
-h1, h2, h3, button {
+h1, h2, h3, .button {
     color: white;
     font-family: 'Scto Grotesk A', sans-serif;
     font-weight: 300;
 }
 
-button {
+.button {
     font-weight: 400;
     color: black
+}
+
+a:hover {
+    opacity:60%
 }
 
 header {
@@ -97,12 +119,13 @@ order: 0;
 flex-grow: 0;
 }
 
-button.small {
+.button.small {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 16px 24px;
+    padding: 1vw 2vw;
     margin:0;
 
     /* Reaktor/White */
@@ -268,7 +291,7 @@ padding: 0px;
 }
 
 
-button {
+.button {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -376,6 +399,10 @@ flex-grow: 1;
         padding: 24px 40px;
     }
     
+    .button, .button.small {
+        padding: 16px 24px
+    }
+    
     .fourSeasons .name {
         gap: 24px;
         width:64vw;
@@ -405,7 +432,7 @@ flex-grow: 1;
         padding: 16px 32px;
     }
     
-    section button {
+    section .button {
         width:100%
     }   
     
@@ -426,11 +453,11 @@ flex-grow: 1;
         gap: 8px
     }
     
-    button {
+    .button, .button.small {
         padding: 16px 24px
     }
     
-    .eventExtra button, .reaktor button {
+    .eventExtra .button, .reaktor .button {
         margin-top:24px
     }
     
