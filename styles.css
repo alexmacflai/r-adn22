@@ -109,7 +109,7 @@ header {
 }
 
 header img {
-    width: clamp(var(--spacing-medium), 4vw, var(--spacing-big));
+    width: clamp(32px, 4vw, var(--spacing-big));
 }
 
 .button {
