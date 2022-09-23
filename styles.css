@@ -149,13 +149,6 @@ footer {
     flex-grow: 0;
 }
 
-footer {
-    flex-direction: column;
-    justify-content: center;
-    padding: var(--spacing-medium) var(--spacing-small);
-    gap: var(--spacing-small);
-}
-
 footer .info {
     display: flex;
     flex-direction: column;
@@ -167,6 +160,18 @@ footer .info {
     order: 0;
     flex-grow: 0;
 }
+
+    footer .logos {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        gap: var(--spacing-medium);
+
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
 
 footer .brewery {
     height: 40px;
@@ -502,16 +507,11 @@ section {
         gap: 12px
     }
     
-    footer .logos {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 0px;
-        gap: var(--spacing-medium);
-
-        flex: none;
-        order: 1;
-        flex-grow: 0;
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        padding: var(--spacing-medium) var(--spacing-small);
+        gap: var(--spacing-small);
     }
 
     footer .info {
