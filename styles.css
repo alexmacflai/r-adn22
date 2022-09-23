@@ -109,7 +109,7 @@ header {
 }
 
 header img {
-    width: clamp(32px, 4vw, var(--spacing-big));
+    width: clamp(var(--spacing-medium), 4vw, var(--spacing-big));
 }
 
 .button {
@@ -130,6 +130,52 @@ header img {
 
 .button.small {
     padding: clamp(var(--spacing-tiny), 1vw, var(--spacing-tiny)) clamp(var(--spacing-small), 1.5vw, var(--spacing-big));
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-medium);
+    gap: var(--spacing-medium);
+
+    width: 100%;
+
+    background: #000000;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+footer {
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--spacing-medium) var(--spacing-small);
+    gap: var(--spacing-small);
+}
+
+footer .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 4px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+footer .brewery {
+    height: 40px;
+    width: auto
+}
+
+footer .adnight {
+    height: 16px;
+    width: auto
 }
 
 
@@ -273,7 +319,7 @@ section {
 }
 
 .eventExtra .button {
-    margin-top: clamp(32px, 3vw + 0.1rem, 4vw);
+    margin-top: clamp(32px, 2vw + 0.1rem, 4vw);
 }
 
 
@@ -313,7 +359,7 @@ section {
 }
 
 .reaktor .button {
-    margin-top: clamp(var(--spacing-small), 3vw + 0.1rem, 4vw);
+    margin-top: clamp(var(--spacing-small), 2vw + 0.1rem, 4vw);
 }
 
 .reaktor .image{
@@ -454,6 +500,22 @@ section {
     
     .reaktor .content {
         gap: 12px
+    }
+    
+    footer .logos {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        gap: var(--spacing-medium);
+
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+
+    footer .info {
+        align-items: center;
     }
 
 }
